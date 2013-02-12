@@ -7,7 +7,7 @@ App.Router.map ->
     @route 'new'
     @route 'edit',
       path: '/:user_id/edit'
-    @resource 'user'
+    @route 'show'
       path: ':user_id'
 
 App.IndexRoute = Ember.Route.extend
