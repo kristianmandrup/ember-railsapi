@@ -5,7 +5,7 @@ App.UsersNewController = Ember.ObjectController.extend
 
   afterCreate: ->
     @content.removeObserver 'id', @, 'afterCreate'
-    @transitionToRoute 'users.show', @content
+    @transitionToRoute 'user', @content
 
   cancel: ->
     @content.deleteRecord()

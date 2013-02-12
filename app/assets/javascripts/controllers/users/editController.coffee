@@ -6,12 +6,12 @@ App.UsersEditController = Ember.ObjectController.extend
 
   update: ->
     @store.commit()
-    @transitionTo('users.show', @content)
+    @transitionTo('user', @content)
 
   cancel: ->
     if @content.isDirty
       @content.rollback()
-    @transitionTo('users.show', @content)
+    @transitionTo('user', @content)
 
   buttonTitle: 'Edit'
   headerTitle: 'Editing'

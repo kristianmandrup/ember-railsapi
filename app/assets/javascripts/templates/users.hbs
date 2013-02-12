@@ -1,0 +1,20 @@
+<div class="left">
+  <h1>Users</h1>
+  <table class='table table-striped'>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+    </tr>
+    {{#each user in users}}
+      <tr>
+        <td>{{user.id}}</td>
+        <td>{{#linkTo 'user' user}}{{user.fullName}}{{/linkTo}}</td>
+      </tr>
+    {{/each}}
+  </table>
+
+  {{#linkTo 'users.new' class='btn btn-primary'}}Create{{/linkTo}}
+</div>
+<div class="right">
+  {{ outlet }}
+</div>
