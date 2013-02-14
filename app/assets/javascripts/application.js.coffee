@@ -15,6 +15,7 @@
 #= require handlebars
 #= require ember
 #= require ember-data
+#= require ember-formBuilder
 #= require bootstrap
 #= require_self
 #= require store
