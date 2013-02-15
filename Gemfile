@@ -6,6 +6,8 @@ gem 'rails', '3.2.9'
 gem 'rails-api'
 gem 'thin'
 gem 'active_model_serializers', :github => 'rails-api/active_model_serializers'
+gem 'client_side_validations'
+gem 'client_side_validations-ember'
 
 group :development, :test do
   gem 'debugger'

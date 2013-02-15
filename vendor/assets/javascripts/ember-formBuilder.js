@@ -1,4 +1,4 @@
-// Last commit: b6c4a80 (2013-02-13 20:27:17 -0500)
+// Last commit: 86441fb (2013-02-14 01:56:38 -0500)
 
 
 (function() {
@@ -37,6 +37,21 @@ Ember.Handlebars.registerHelper('input', function(property, options) {
   options.hash.context = this;
   options.hash.property = property;
   return Ember.Handlebars.helpers.view.call(this, Ember.FormBuilder.Input, options);
+});
+
+})();
+
+
+
+(function() {
+Ember.Handlebars.registerHelper('submit', function(value, options) {
+  if (typeof(value) === 'object') {
+    options = value;
+    value = undefined;
+  }
+  options.hash.context = this;
+  options.hash.value = value || 'Submit';
+  return Ember.Handlebars.helpers.view.call(this, Ember.FormBuilder.Submit, options);
 });
 
 })();
@@ -127,6 +142,34 @@ Ember.FormBuilder.Input = Ember.View.extend({
       this.model.validate(this.property);
     }
   }
+});
+
+})();
+
+
+
+(function() {
+Ember.FormBuilder.Submit = Ember.View.extend({
+  tagName: 'button',
+  attributeBindings: ['value'],
+  type: 'submit',
+  init: function() {
+    this.set('value', this.value);
+  },
+  eventManager: Ember.Object.create({
+    click: function(event) {
+      debugger;
+      if (this.get('context').validate()) {
+        this.get('controller').send('submit');
+      }
+    },
+    submit: function(event) {
+      debugger;
+      if (this.get('context').validate()) {
+        this.get('controller').send('submit');
+      }
+    }
+  })
 });
 
 })();

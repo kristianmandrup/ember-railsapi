@@ -39,6 +39,9 @@ GEM
     bootstrap-sass (2.0.3.1)
     builder (3.0.4)
     chunky_png (1.2.5)
+    client_side_validations (3.2.1)
+    client_side_validations-ember (0.1.0)
+      client_side_validations (~> 3.2.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -144,6 +147,8 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers!
   bootstrap-sass (~> 2.0.3.0)
+  client_side_validations
+  client_side_validations-ember
   coffee-rails (~> 3.2)
   compass-rails
   debugger
