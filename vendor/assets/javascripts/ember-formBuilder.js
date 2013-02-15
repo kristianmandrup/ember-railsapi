@@ -1,4 +1,4 @@
-// Last commit: 86441fb (2013-02-14 01:56:38 -0500)
+// Last commit: 8f879fc (2013-02-15 13:34:29 -0500)
 
 
 (function() {
@@ -25,6 +25,7 @@ Ember.Handlebars.registerHelper('error', function(property, options) {
 
 (function() {
 Ember.Handlebars.registerBoundHelper('formFor', function(object, options) {
+  options.hash.context = object;
   return Ember.Handlebars.helpers.view.call(object, Ember.FormBuilder.Form, options);
 });
 
@@ -100,7 +101,15 @@ Ember.FormBuilder.Error = Ember.View.extend({
 
 (function() {
 Ember.FormBuilder.Form = Ember.View.extend({
-  tagName: 'form'
+  tagName: 'form',
+  attributeBindings: ['novalidate'],
+  novalidate: 'novalidate',
+  submit: function(event) {
+    if (this.get('context').validate === undefined || this.get('context').validate()) {
+      this.get('controller').send('submit');
+    }
+    event.preventDefault();
+  }
 });
 
 })();
@@ -150,26 +159,17 @@ Ember.FormBuilder.Input = Ember.View.extend({
 
 (function() {
 Ember.FormBuilder.Submit = Ember.View.extend({
-  tagName: 'button',
-  attributeBindings: ['value'],
+  tagName: 'input',
+  attributeBindings: ['type', 'value'],
   type: 'submit',
   init: function() {
     this.set('value', this.value);
   },
-  eventManager: Ember.Object.create({
-    click: function(event) {
-      debugger;
-      if (this.get('context').validate()) {
-        this.get('controller').send('submit');
-      }
-    },
-    submit: function(event) {
-      debugger;
-      if (this.get('context').validate()) {
-        this.get('controller').send('submit');
-      }
+  onClick: function() {
+    if (this.get('context').validate()) {
+      this.get('controller').send('submit');
     }
-  })
+  }
 });
 
 })();
