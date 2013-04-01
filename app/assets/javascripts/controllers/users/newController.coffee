@@ -1,5 +1,5 @@
 App.UsersNewController = Ember.ObjectController.extend
-  create: ->
+  submit: ->
     @store.commit()
     @content.addObserver 'id', @, 'afterCreate'
 

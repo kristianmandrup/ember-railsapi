@@ -15,6 +15,8 @@
 #= require handlebars
 #= require ember
 #= require ember-data
+#= require ember-data-validations
+#= require ember-formBuilder
 #= require bootstrap
 #= require_self
 #= require store
@@ -23,5 +25,6 @@
 #= require_tree ./models
 #= require_tree ./templates
 #= require_tree ./views
+#= require rails.validations.ember
 
 window.App = Ember.Application.create()
