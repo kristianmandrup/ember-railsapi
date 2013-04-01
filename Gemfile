@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-ruby '1.9.3'
+ruby '2.0.0'
 
 gem 'rails', '3.2.11'
 gem 'rails-api'
@@ -9,13 +9,25 @@ gem 'active_model_serializers', :github => 'rails-api/active_model_serializers'
 gem 'client_side_validations'
 gem 'client_side_validations-ember'
 
-group :development, :test do
-  gem 'debugger'
-  gem 'sqlite3'
-end
+# MongoDB..
+gem 'mongoid', '>= 3.1'
+gem 'moped'
 
-group :production do
-  gem 'pg'
+# inherited_resources: for controllers with less code
+gem 'inherited_resources'
+
+# SLIM: mmmm, less <%%>s
+gem 'slim', '~> 2.0.0.pre.6'
+
+group :development, :test do
+  gem 'rspec-rails', '>= 2.12'
+  gem 'webrat', '>= 0.7.3'
+  gem 'factory_girl_rails', '>= 1.7'
+  gem 'rdoc', '~> 3.12'
+  gem "database_cleaner"
+  gem "mongoid-rspec"
+
+  gem 'debugger'
 end
 
 group :assets do

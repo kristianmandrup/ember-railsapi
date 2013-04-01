@@ -1,5 +1,10 @@
-class User < ActiveRecord::Base
-  attr_accessible :age, :first_name, :last_name, :quote
+class User 
+  include Mongoid::Document
+  
+  field :age, type: Integer
+  field :first_name
+  field :last_name
+  field :quote
 
   validates :first_name, :last_name, :presence => true
   validates :age, :numericality => true
