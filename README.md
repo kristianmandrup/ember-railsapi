@@ -26,3 +26,7 @@ This is a work in progress.
 `$ open http://localhost:3000`
 
 Enjoy!
+
+## TODO
+
+Convert index.html.erb to SLIM :)

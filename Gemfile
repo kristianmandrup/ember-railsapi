@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 ruby '2.0.0'
 
 gem 'rails', '4.0.0.beta1', github: 'rails/rails'
-gem 'rails-api', path: '/Users/kmandrup/private/repos/rails-api' # github: 'rails-api/rails-api'
+gem 'rails-api', '~> 0.1.0'
 
 gem 'active_model_serializers', :github => 'rails-api/active_model_serializers'
 gem 'client_side_validations'
