@@ -13,10 +13,7 @@ gem 'client_side_validations-ember'
 gem 'mongoid', '~> 4.0.0', github: 'mongoid/mongoid'
 gem 'moped'
 
-gem 'mongoid-serializer', path: '/Users/kmandrup/private/repos/mongoid-serializer'
-
-# inherited_resources: for controllers with less code
-# gem 'inherited_resources'
+gem 'mongoid-serializer'
 
 # SLIM: mmmm, less <%%>s
 gem 'slim', '~> 2.0.0.pre.6'
