@@ -1,0 +1,11 @@
+h1
+  = fullName
+
+.quote
+  q
+    = quote
+
+.page-header
+
+= linkTo 'users.index' class='btn' | Back
+= linkTo 'users.edit' content class='btn btn-primary' | Edit

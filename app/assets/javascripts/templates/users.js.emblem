@@ -1,0 +1,15 @@
+.row
+  .span5
+    h1 Users
+    table.table.table-striped
+      tr
+        th Name
+        th Age
+      = each user in users
+        tr
+          td
+            = linkTo 'users.show' user | #{user.fullName}
+          td #{user.age}
+    = linkTo 'users.new' class='btn btn-primary' | Create
+  .span7
+    = outlet

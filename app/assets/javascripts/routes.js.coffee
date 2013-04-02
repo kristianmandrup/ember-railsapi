@@ -18,6 +18,7 @@ App.UsersRoute = Ember.Route.extend
     App.User.find()
   setupController: (controller, model) ->
     @controllerFor('application').set('currentRoute', 'users')
+    console.log 'users', model
     controller.set('users', model)
 
 App.UserRoute = Ember.Route.extend

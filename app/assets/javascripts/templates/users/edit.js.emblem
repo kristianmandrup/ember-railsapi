@@ -1,0 +1,2 @@
+= template 'users/form'
+a.btn.btn-danger click="destroy" Destroy

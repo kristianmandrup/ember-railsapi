@@ -1,0 +1,12 @@
+h1 #{headerTitle} #{fullName}
+
+= formFor model
+  = input firstName
+  = input lastName
+  = input age
+  = input quote
+  = submit
+
+.page-header
+
+a.btn.btn-inverse click="cancel controller" Cancel
