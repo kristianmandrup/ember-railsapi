@@ -37,7 +37,9 @@ group :assets do
   gem 'sass-rails',                       github: 'rails/sass-rails'
   gem 'coffee-rails',                     github: 'rails/coffee-rails'
 
-  gem 'compass-rails'
+  # rails 4 compatible version!
+  gem 'compass-rails', github: 'milgner/compass-rails', ref: '1749c06f15dc4b058427e7969810457213647fb8'
+
   gem 'uglifier'
   gem 'bootstrap-sass', '~> 2.3.1.0'
   gem 'handlebars_assets'
