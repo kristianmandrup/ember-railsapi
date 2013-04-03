@@ -1,4 +1,4 @@
-App.User = DS.Model.extend(DS.Validations.Mixin,
+App.User = DS.Model.extend(DS.Validations.Mixin, App.modelMixins.RWrap,
   firstName: attr('string')
   lastName:  attr('string')
   quote:     attr('string')
