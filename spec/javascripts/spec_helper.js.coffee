@@ -24,7 +24,7 @@ beforeEach: (done) ->
   # want to have complete control of runloops.
   Ember.testing = true
 
-  Ember.run ->
+  Ember.run( ->
     # Advance App readiness, which was deferred when the app
     # was created.
 
@@ -35,11 +35,13 @@ beforeEach: (done) ->
     # When App readiness promise resolves, setup is complete
     App.then: ->
       done()
+  )
 
 afterEach: ->
   # Reset App
-  Ember.run ->
+  Ember.run( ->
     App.reset()
+  )
 
   # Restore XHR
   server.restore()

@@ -15,6 +15,8 @@ gem 'moped'
 
 gem 'mongoid-serializer', '~> 0.0.2', github: 'kristianmandrup/mongoid-serializer'
 
+gem 'nokogiri', '~> 1.5.9'
+
 # SLIM: mmmm, less <%%>s
 gem 'slim', '~> 2.0.0.pre.6'
 

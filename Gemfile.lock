@@ -307,6 +307,7 @@ DEPENDENCIES
   mongoid-rspec
   mongoid-serializer (~> 0.0.2)!
   moped
+  nokogiri (~> 1.5.9)
   poltergeist
   quiet_assets
   rails (= 4.0.0.beta1)!
