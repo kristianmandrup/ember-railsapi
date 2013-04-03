@@ -13,7 +13,9 @@ gem 'client_side_validations-ember'
 gem 'mongoid', '~> 4.0.0', github: 'mongoid/mongoid'
 gem 'moped'
 
-gem 'mongoid-serializer'
+gem 'mongoid-serializer', '~> 0.0.2', github: 'kristianmandrup/mongoid-serializer'
+
+gem 'nokogiri', '~> 1.5.9'
 
 # SLIM: mmmm, less <%%>s
 gem 'slim', '~> 2.0.0.pre.6'
@@ -27,27 +29,30 @@ group :development, :test do
   gem "mongoid-rspec"
 
   gem 'debugger'
+
+  gem 'poltergeist'
+  gem 'konacha'
 end
 
-group :assets do
-  gem 'sprockets-rails', '~> 2.0.0.rc3',  github: 'rails/sprockets-rails'
-  gem 'sass-rails',                       github: 'rails/sass-rails'
-  gem 'coffee-rails',                     github: 'rails/coffee-rails'
+# assets
+gem 'rubyjs-rails'
+gem 'sprockets-rails', '~> 2.0.0.rc3',  github: 'rails/sprockets-rails'
+gem 'sass-rails',                       github: 'rails/sass-rails'
+gem 'coffee-rails',                     github: 'rails/coffee-rails'
 
-  # rails 4 compatible version!
-  gem 'compass-rails', github: 'milgner/compass-rails', ref: '1749c06f15dc4b058427e7969810457213647fb8'
+# rails 4 compatible version!
+gem 'compass-rails', github: 'milgner/compass-rails', ref: '1749c06f15dc4b058427e7969810457213647fb8'
 
-  gem 'uglifier'
-  gem 'bootstrap-sass', '~> 2.3.1.0'
-  gem 'handlebars_assets'
-end
+gem 'uglifier'
+gem 'bootstrap-sass', '~> 2.3.1.0'
+gem 'handlebars_assets'
 
 group :development do
   gem 'quiet_assets'
 end
 
-gem 'ember-rails', '~> 0.11.1', github: 'emberjs/ember-rails'
-gem 'emblem-rails',             github: 'alexspeller/emblem-rails'
-gem 'handlebars-source', '~> 1.0.0.rc3'
+gem 'ember-rails',        '~> 0.11.1', github: 'emberjs/ember-rails'
+gem 'emblem-rails',                    github: 'alexspeller/emblem-rails'
+gem 'handlebars-source',  '~> 1.0.0.rc3'
 
 gem 'thin'
