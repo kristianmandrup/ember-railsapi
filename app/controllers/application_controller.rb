@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::API
+  include ActionController::MimeResponds
+
   # include JsonStatusCodeRender
 
   def index
@@ -38,4 +40,3 @@ class ApplicationController < ActionController::API
     obj.key?(:json) && obj[:json].kind_of?(Mongoid::Document) && !obj.key?(:status)
   end  
 end
-
