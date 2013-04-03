@@ -1,10 +1,8 @@
 # http://stackoverflow.com/questions/13367656/using-activemodelserializer-in-rails-json-data-differs-between-json-and-inde
-
 # http://stackoverflow.com/questions/11571777/ember-data-and-mongodb-how-to-handle-id
 
 class UsersController < ApplicationController
   def index
-    puts "users: #{users}"
     render json: users
   end
 

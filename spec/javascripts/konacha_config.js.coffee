@@ -2,11 +2,15 @@
 # see http://visionmedia.github.com/mocha/#interfaces
 mocha.ui 'bdd'
 
-# or, ignore all leaks
-mocha.ignoreLeaks
+mocha.globals ['Ember', 'DS', 'App', 'MD5']
 
 # set slow test timeout in ms
 mocha.timeout 5
 
 # Show stack trace on failing assertion.
 chai.Assertion.includeStack = true
+
+ENV = {TESTING: true}
+
+
+

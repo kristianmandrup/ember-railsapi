@@ -51,8 +51,8 @@ group :development do
   gem 'quiet_assets'
 end
 
-gem 'ember-rails', '~> 0.11.1', github: 'emberjs/ember-rails'
-gem 'emblem-rails',             github: 'alexspeller/emblem-rails'
-gem 'handlebars-source', '~> 1.0.0.rc3'
+gem 'ember-rails',        '~> 0.11.1', github: 'emberjs/ember-rails'
+gem 'emblem-rails',                    github: 'alexspeller/emblem-rails'
+gem 'handlebars-source',  '~> 1.0.0.rc3'
 
 gem 'thin'
