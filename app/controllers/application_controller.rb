@@ -1,11 +1,5 @@
 class ApplicationController < ActionController::API
-  include ActionController::MimeResponds
-
   # include JsonStatusCodeRender
-
-  def index
-    puts "Hello world"
-  end
 
   def render(*args)
     puts "do render!"

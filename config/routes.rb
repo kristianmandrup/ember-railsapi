@@ -12,8 +12,8 @@ EmberRailsAPI::Application.routes.draw do
   end
 
   resources   :users, :except => :edit,       :constraints => FormatTest.new(:json)
-  get '*foo', :to => 'application#index',     :constraints => FormatTest.new(:html)
+  get '*foo', :to => 'ember#index',     :constraints => FormatTest.new(:html)
 
   # root to: 'application#index'
-  get '/',    :to => 'application#index',     :constraints => FormatTest.new(:html)
+  get '/',    :to => 'ember#index',     :constraints => FormatTest.new(:html)
 end
