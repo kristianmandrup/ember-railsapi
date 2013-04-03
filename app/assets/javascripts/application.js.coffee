@@ -13,18 +13,21 @@
 #= require modernizr
 #= require jquery
 #= require handlebars
+#= require ruby
 #= require ember
 #= require ember-data
 #= require ember-data-validations
 #= require ember-formBuilder
 #= require bootstrap
 #= require_self
+#= require rails.validations.ember
 #= require store
 #= require routes
+#= require_tree ./helpers
 #= require_tree ./controllers
 #= require_tree ./models
 #= require_tree ./templates
 #= require_tree ./views
-#= require rails.validations.ember
+
 
 window.App = Ember.Application.create()

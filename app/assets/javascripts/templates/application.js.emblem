@@ -1,0 +1,15 @@
+.navbar.navbar-inverse.navbar-fixed-top
+  .navbar-inner
+    .container
+      .nav-collapse.collapse'>
+        ul.nav
+          li class="isHome:active"
+            = linkTo 'index' | Home
+          li class="isUsers:active"
+            = linkTo 'users.index' | Users
+#main.container
+  .content
+    .row'
+      .span12
+        .page-header
+        = outlet

@@ -16,10 +16,11 @@ App.IndexRoute = Ember.Route.extend
 App.UsersRoute = Ember.Route.extend
   model: ->
     App.User.find()
+    # R App.User.find()
   setupController: (controller, model) ->
     @controllerFor('application').set('currentRoute', 'users')
-    console.log 'users', model
-    controller.set('users', model)
+    # console.log 'users', model
+    controller.set 'users', model
 
 App.UserRoute = Ember.Route.extend
   setupController: (controller, model) ->
@@ -27,4 +28,7 @@ App.UserRoute = Ember.Route.extend
 
 App.UsersNewRoute = App.UserRoute.extend
   model: ->
-    App.User.createRecord({firstName:'', lastName:''})
+    App.User.createRecord 
+      firstName: ''
+      lastName:  ''
+
